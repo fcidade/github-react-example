@@ -32,7 +32,20 @@ const Details = styled.div`
 	}
 `
 
+const Loading = styled.div`
+  text-align: center;
+`
+
+/**
+ * Draws the user profile with his name, biography and avatar
+ * @param {Object} props - Component props
+ * @param {string} props.name - User name
+ * @param {string} props.bio - User biography
+ * @param {string} props.avatar - User avatar url
+ */
 export default function Profile({ name, bio, avatar }){
+  if(!name && !bio && !avatar)
+    return <Loading>Loading...</Loading>
 	return (
 		<ProfileContainer>
 			<Avatar>
