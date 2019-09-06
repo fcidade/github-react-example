@@ -8,7 +8,6 @@ import UserDetails from './pages/UserDetails';
  * @returns {object} Returns all the JSX for the entire application.
  */
 function App() {
-  console.log(typeof <BrowserRouter/>);
   return (
     <BrowserRouter>
 			<Route path='/' exact component={Home}/>
